@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main {
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            font-size: 20px;
+            background-color: blue;
+        }
+        .task {
+            display: flex;
+            margin-right: 50px;
+            gap: 20px;
+            color: white;
+            position: relative;
+        }
+        .logo {
+            color: white;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        .one, .two {
+            display: none;
+            background-color: blue;
+            position: absolute;
+            font-size: 20px;
+            color: white;
+            z-index: 10;
+        }
+        .Services:hover .one {
+            display: block;
+        }
+        .one:hover {
+            display: block;
+        }
+        .one li:hover > .two {
+            display: block;
+        }
+        li {
+            list-style-type: none;
+            position: relative;
+        }
+        .one {                  
+            top: 50px;
+            left: 0;
+            padding: 10px;
+            border: 1px solid white;
+        }
+        .two {
+            top: 0;
+            left: 100%;
+            padding: 10px;
+            border: 1px solid white;
+        }
+        button {
+            height: 30px;
+            width: 70px;
+            background-color: white;
+        }
+        .Services {
+            height: 50px;
+            position: relative;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        li:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="logo">Logo</div>
+        <div class="task">
+            <div class="Home">Home</div>
+            <div class="About">About</div>
+            <div class="Services">Services<i class="fa-solid fa-chevron-down"></i>
+                <div class="one">
+                    <ul>
+                        <li>Web Design</li>
+                        <hr>
+                        <li>Marketing</li>
+                        <hr>
+                        <li>Wordpress</li>
+                        <hr>
+                        <li>More<i class="fa-solid fa-greater-than"></i>
+                            <div class="two">
+                                <ul>
+                                    <li>HTML</li>
+                                    <hr>
+                                    <li>CSS</li>
+                                    <hr>
+                                    <li>JavaScript</li>
+                                    <hr>
+                                    <li>jQuery</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Blogs">Blogs</div>
+            <div class="Contact">Contact</div>
+            <button>Login</button>
+        </div>
+    </div>
+</body>
+</html>
